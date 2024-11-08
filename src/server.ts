@@ -1,12 +1,12 @@
 import express from "express";
-import { Express, Request, Response } from "express";
-const server: Express = express();
+import { build_router } from "./routes/build_routes.js";
+import "dotenv/config";
+const PORT = process.env.PORT || 3003;
+const server = express();
 server.use(express.json());
 
-server.get("/api", (req: Request, res: Response) => {
-  res.send("aboba");
-});
+server.use("/api", build_router);
 
-server.listen(3002, () => {
-  console.log(`server on port ${3002}`);
+server.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
