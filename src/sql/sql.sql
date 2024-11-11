@@ -40,6 +40,7 @@ CREATE TABLE build (
     id SERIAL PRIMARY KEY,
     name VARCHAR NOT NULL,
     url VARCHAR NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
     build_type_id INTEGER NOT NULL,
     skill_id INTEGER NOT NULL,
     author_id INTEGER NOT NULL,
