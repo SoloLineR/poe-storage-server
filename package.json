@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc &&  node dist/server.js",
-    "lint": "eslint"
+    "lint": "eslint",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
