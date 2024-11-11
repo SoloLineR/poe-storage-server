@@ -1,5 +1,5 @@
 import express from "express";
-import { build_router } from "./build/build_routes.js";
+import { build_router } from "./build_model/build_routes.js";
 import "dotenv/config";
 const PORT = process.env.PORT || 3003;
 const server = express();
